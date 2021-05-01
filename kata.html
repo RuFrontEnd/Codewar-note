@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+
+<body>
+    <div>數值 / 字串 / 陣列 方法</div>
+    <script>
+        // 數值轉字串
+        const numToString = (num) => {
+            let numToString = `${num}`
+            let numToStringB = String(num)
+            console.log('numToString', numToString)
+            console.log('numToStringB', numToStringB)
+        }
+        // numToString(123)
+
+        // 多個數值取最大值
+        const mathMax = (numA, numB, numC) => {
+            const maxNum = Math.max(numA, numB, numC)
+            console.log('maxNum', maxNum)
+        }
+        // mathMax(1, 2, 3)
+
+        // 字串轉數值(整數)
+        const strToNumber = (str) => {
+            let strToNumber = parseInt(str)
+            console.log('strToNumber', strToNumber)
+        }
+        // strToNumber('123.45')
+
+        // 字串轉小數
+        const strToFloat = (str) => {
+            let strToFloat = parseFloat(str)
+            console.log('strToFloat', strToFloat)
+        }
+        // strToFloat('123.45')
+
+        // 字串轉陣列
+        const strToArray = (str) => {
+            let strToArray = str.split('') // split參數為「用什麼分割」
+            console.log('strToArray', strToArray)
+        }
+        // strToArray('hello')
+
+        // 字串去除空白
+        const deleteSpace = (str) => {
+            let strToArray = str.split('') // split參數為「用什麼分割」
+            console.log('strToArray', strToArray)
+        }
+        // strToArray('hello')
+
+        // 判斷字串含有子字串
+        const getChildStr = (str) => {
+            const transferredStr = str.toLowerCase() // 統一將字串轉小寫 or str.toUpperCase() 統一將字串轉大寫
+            const isFindChildStr = transferredStr.indexOf('coding')
+            console.log('isFindChildStr', isFindChildStr) // 如果找到回傳索引值位值, 沒有回傳-1
+        }
+        // getChildStr('Coding')
+        // getChildStr('Eating')
+
+        // 字串擷取(分片)
+        const sliceStr = (str) => {
+            const SliceStringA = str.slice(8) // str.slice(N)擷取第N位字之後的字串(含第N位)
+            const SliceStringB = str.slice(5, 16) // str.slice(N1, N2)擷取第N1位字到第N2位字(含第N1位,不含N2位)
+            const SliceStringC = str.slice(-11) // str.slice(-N)擷取第-N位字之後的字串(即從尾過來,含第-N位)
+            const SliceStringD = str.slice(-3, -1) // str.slice(-N1, -N2)擷取第-N1位字到第-N2位字(含第-N1位, 不含-N2位)
+            console.log('SliceStringA輸出', SliceStringA)
+            console.log('SliceStringB輸出', SliceStringB)
+            console.log('SliceStringC輸出', SliceStringC)
+            console.log('SliceStringD輸出', SliceStringD)
+        }
+        // sliceStr('The quick brown fox jumps over the lazy dog.')
+
+        // 陣列取最後項
+        const getLastItem = (arr) => {
+            console.log('arr[arr.length - 1]', arr[arr.length - 1])
+        }
+        getLastItem([1, 2, 3])
+
+        // 陣列反轉
+        const reverseArray = (arr) => {
+            let reverseArr = arr.reverse()
+            console.log('reverseArr', reverseArr)
+        }
+        // reverseArray(['A', 'B,', 'C'])
+
+        // 陣列擷取(分片)
+        const SliceArr = (arr) => {
+            const SliceArrA = arr.slice(2) // arr.slice(N)擷取第N位字之後的字串(含第N位)
+            const SliceArrB = arr.slice(2, 4) // arr.slice(N1, N2)擷取第N1位字到第N2位字(含第N1位,不含N2位)
+            const SliceArrC = arr.slice(-3) // arr.slice(-N)擷取第-N位字之後的字串(即從尾過來,含第-N位)
+            const SliceArrD = arr.slice(-3, -1) // arr.slice(-N1, -N2)擷取第-N1位字到第-N2位字(含第-N1位, 不含-N2位)
+            console.log('SliceArrA輸出', SliceArrA)
+            console.log('SliceArrB輸出', SliceArrB)
+            console.log('SliceArrC輸出', SliceArrC)
+            console.log('SliceArrD輸出', SliceArrD)
+        }
+        // SliceArr(['A', 'B', 'C', 'D', 'E'])
+
+        // 開根號
+        const getSquareRoot = (num1, num2) => {
+            let squareRoot = Math.sqrt(num1 ** 2 + num2 ** 2)
+            console.log('squareRoot', squareRoot)
+        }
+        // getSquareRoot(3, 4)
+
+        // 求距離
+        const getDistance = (num1, num2) => {
+            let distance = Math.hypot(num1, num2)
+            console.log('distance', distance)
+        }
+        // getDistance(3, 4)
+
+        // 無條件捨去
+        const chopOff = (num) => {
+            let chopOffNum = parseInt(num)
+            console.log('chopOffNum', chopOffNum)
+        }
+        // chopOff(1.23)
+
+        // 轉正數
+        const convertToPositiveNum = (num) => {
+            let positiveNum = Math.abs(num)
+            console.log('positiveNum', positiveNum)
+        }
+        // convertToPositiveNum(-5)
+
+        // 陣列跌代
+        const preFizz = length => Array.from({ length: length }, (v, i) => {
+            console.log(i)
+        })
+        // preFizz(5)
+
+        // 陣列取最小數值 / 最大值
+        const minMax = (arr) => {
+            const min = Math.min(...arr)
+            const max = Math.max(...arr)
+            console.log(min, max)
+        }
+        // minMax([1, 2, 3])
+        // minMax([1, 2, 'hello'])
+
+        // regex(尋找匹配字串 / 取代匹配字串)
+        // 常用規則
+        // /./ => 任意字元
+        // /a/ => 字串含a
+        // /a./ => 字串含a+任意字元
+        // [A-Z] => 字串含大寫字母
+        // [A-Z] => 字串含小寫字母
+        // \d => 數字
+        // \D => 非數字
+        // \w => 數字字母與底線，等同[A - Za - z0–9_]
+        // \W => 非數字字母與底線，等同[^ A - Za - z0–9_]
+        // \s => 空白字元
+        // \S => 非空白字元
+        // ^ => 比對內容的開始位置
+        // $ => 比對內容的結束位置
+        // [] => 驗證括弧內的每一個字元
+        // [^] => 非括弧內的每一個字元
+        // * => 0次以上
+        // + => 1次以上
+        // ? => 0次或1次
+        // {m} => m次
+        // {n,} => 最少n次
+        // {m,n} => m次到n次
+        // {m,n}? => m次到n次之間最少次的
+
+        const testReg = (str) => {
+            const rules = /[a-z]/
+            const isMatchRules = rules.test(str)
+            console.log(isMatchRules)
+        } // 驗證是否符合regex
+        // testReg('123')
+        // testReg('abc')
+        // testReg('123abc')
+
+        const matchReg = (str) => {
+            const matchStr = str.match(/a/)
+            console.log('matchStr', matchStr)
+        } // 直接匹配
+        // matchReg('abc')
+
+        const multiMatchReg = (phoneStr) => {
+            const matchStr = phoneStr.match(/[0-9]{10}/) // [0-9]表示匹配 {10}表示要匹配的次數
+            console.log('matchStr', matchStr)
+        } // 多次匹配
+        // multiMatchReg('0910608132')
+
+        const itemsMatchReg = (str) => {
+            const matchStr = str.match(/[A-Z]{3}-[0-9]{5}/) // [0-9]表示匹配 {10}表示要匹配的次數
+            console.log('matchStr', matchStr)
+        } // 多項多次匹配
+        // itemsMatchReg('SFD-12358')
+
+        // i 表示 ignore case(忽略大小寫)
+        const ignoreCaseReg = (str) => {
+            const matchStr = str.match(/abc/i) // [0-9]表示匹配 {10}表示要匹配的次數
+            console.log('matchStr', matchStr)
+        } // 多項多次匹配
+        // ignoreCaseReg('ABC')
+
+
+
+
+
+    </script>
+</body>
+
+</html>
