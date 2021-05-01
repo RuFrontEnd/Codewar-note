@@ -48,11 +48,11 @@
         // strToArray('hello')
 
         // 字串去除空白
-        const deleteSpace = (str) => {
-            let strToArray = str.split('') // split參數為「用什麼分割」
-            console.log('strToArray', strToArray)
+        const removeSpace = (str) => {
+            let removeSpaceStr = str.replace(/ /g, '') // split參數為「用什麼分割」
+            console.log('removeSpaceStr', removeSpaceStr)
         }
-        // strToArray('hello')
+        // removeSpace('h e l l o')
 
         // 判斷字串含有子字串
         const getChildStr = (str) => {
@@ -80,7 +80,7 @@
         const getLastItem = (arr) => {
             console.log('arr[arr.length - 1]', arr[arr.length - 1])
         }
-        getLastItem([1, 2, 3])
+        // getLastItem([1, 2, 3])
 
         // 陣列反轉
         const reverseArray = (arr) => {
