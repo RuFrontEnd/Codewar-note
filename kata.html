@@ -76,6 +76,24 @@
         }
         // sliceStr('The quick brown fox jumps over the lazy dog.')
 
+        // 字串是否含有數字字串
+        const isIncludeNumber = (str) => {
+            const isInclude = /[1-9]/g.test(str)
+            console.log(isInclude)
+        }
+        // isIncludeNumber('hello123')
+
+        // 判斷字母大小
+        const determineCase = (character) => {
+            if (character >= 'A' && character <= 'Z') {
+                console.log('UpperCase')
+                return 'UpperCase' // UpperCase 
+            }
+            console.log('LowerCase')
+            return 'LowerCase' // LowerCase 
+        }
+        // determineCase('A')
+
         // 陣列取最後項
         const getLastItem = (arr) => {
             console.log('arr[arr.length - 1]', arr[arr.length - 1])
