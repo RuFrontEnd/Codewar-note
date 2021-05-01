@@ -1,2 +1,2 @@
-# codeWar-note
-CodeWar JS string / array method research 
+# codewar-note
+Codewar JS string / array method research 
