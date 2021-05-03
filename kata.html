@@ -96,7 +96,13 @@
         }
         // isIncludeNumber('hello123')
 
-        // console.log('abc\ngcd')
+        // 判斷母字串是否包含子字串
+        const includesStr = (FatherStr, sonStr) => {
+            const isIncluded = FatherStr.includes(sonStr)
+            console.log('isIncluded', isIncluded)
+        }
+        // includesStr('a  bc', '  ')
+        // includesStr('a  bc', 'd')
 
         // 判斷字母大小
         const determineCase = (character) => {
