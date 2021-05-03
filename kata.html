@@ -26,6 +26,19 @@
         }
         // mathMax(1, 2, 3)
 
+        // 數值 轉二進位制
+        // 數值字串 轉十進位制
+        const convertBinary = (num = 0, str = '') => {
+            if (num !== 0) {
+                console.log(num.toString(2)) // 由十進位轉二進位
+            }
+            if (str !== '') {
+                console.log(parseInt(str, 2)) // 由二進位轉十位
+            }
+        }
+        // convertBinary(10)
+        // convertBinary(0, '1010')
+
         // 字串轉數值(整數)
         const strToNumber = (str) => {
             let strToNumber = parseInt(str)
@@ -169,7 +182,7 @@
         const joinArr = (arr) => {
             console.log(arr.join('------'))
         }
-        joinArr(['ABC', 'DEF', 'GHI'])
+        // joinArr(['ABC', 'DEF', 'GHI'])
 
         // regex(尋找匹配字串 / 取代匹配字串)
         // 常用規則
