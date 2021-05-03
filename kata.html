@@ -226,9 +226,11 @@
 
         const matchReg = (str) => {
             const matchStr = str.match(/a/)
+            const matchStrB = str.match(/[a-z]+/g) // +表示不只找一個
             console.log('matchStr', matchStr)
+            console.log('matchStrB', matchStrB)
         } // 直接匹配
-        // matchReg('abc')
+        matchReg('abc')
 
         const multiMatchReg = (phoneStr) => {
             const matchStr = phoneStr.match(/[0-9]{10}/) // [0-9]表示匹配 {10}表示要匹配的次數
