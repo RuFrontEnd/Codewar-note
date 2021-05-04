@@ -67,6 +67,13 @@
         }
         // removeSpace('h e l l o')
 
+        // 字串重複
+        const repeatStr = (str, i) => {
+            let repeatedStr = str.repeat(i)
+            console.log('repeatedStr', repeatedStr)
+        }
+        repeatStr('hello!', 5)
+
         // 判斷字串含有子字串
         const getChildStr = (str) => {
             const transferredStr = str.toLowerCase() // 統一將字串轉小寫 or str.toUpperCase() 統一將字串轉大寫
@@ -230,7 +237,7 @@
             console.log('matchStr', matchStr)
             console.log('matchStrB', matchStrB)
         } // 直接匹配
-        matchReg('abc')
+        // matchReg('abc')
 
         const multiMatchReg = (phoneStr) => {
             const matchStr = phoneStr.match(/[0-9]{10}/) // [0-9]表示匹配 {10}表示要匹配的次數
@@ -250,6 +257,8 @@
             console.log('matchStr', matchStr)
         } // 多項多次匹配
         // ignoreCaseReg('ABC')
+
+
 
 
 
