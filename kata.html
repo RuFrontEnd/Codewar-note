@@ -26,6 +26,15 @@
         }
         // mathMax(1, 2, 3)
 
+        // 字串轉數值(整數)
+        const strToNumber = (str) => {
+            let strToNumber = parseInt(str)
+            let strToNumberB = Number(str)
+            console.log('strToNumber', strToNumber)
+            console.log('strToNumberB', strToNumberB)
+        }
+        // strToNumber('123.45')
+
         // 數值 轉二進位制
         // 數值字串 轉十進位制
         const convertBinary = (num = 0, str = '') => {
@@ -38,13 +47,6 @@
         }
         // convertBinary(10)
         // convertBinary(0, '1010')
-
-        // 字串轉數值(整數)
-        const strToNumber = (str) => {
-            let strToNumber = parseInt(str)
-            console.log('strToNumber', strToNumber)
-        }
-        // strToNumber('123.45')
 
         // 字串轉小數
         const strToFloat = (str) => {
@@ -72,7 +74,7 @@
             let repeatedStr = str.repeat(i)
             console.log('repeatedStr', repeatedStr)
         }
-        repeatStr('hello!', 5)
+        // repeatStr('hello!', 5)
 
         // 判斷字串含有子字串
         const getChildStr = (str) => {
@@ -257,7 +259,6 @@
             console.log('matchStr', matchStr)
         } // 多項多次匹配
         // ignoreCaseReg('ABC')
-
 
 
 
