@@ -201,6 +201,15 @@
         }
         // joinArr(['ABC', 'DEF', 'GHI'])
 
+        // 陣列去除重複值
+        const removeRepeatedValue = (numbers) => {
+            const filteredArray = numbers.filter((number, index, arr) => {
+                return arr.indexOf(number) === index; // indexOf(value) 預設回傳第一個value的索引值, 如果要找到第N個出現的 => arr.indexOf(value, N)
+            });
+            console.log(filteredArray) // [1, 2, 3, 4, 5]
+        }
+        removeRepeatedValue([1, 2, 3, 4, 5, 1, 2, 3])
+
         // regex(尋找匹配字串 / 取代匹配字串)
         // 常用規則
         // /./ => 任意字元
@@ -261,8 +270,6 @@
             console.log('matchStr', matchStr)
         } // 多項多次匹配
         // ignoreCaseReg('ABC')
-
-
 
 
 
