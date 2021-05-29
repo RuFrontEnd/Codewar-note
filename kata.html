@@ -217,6 +217,7 @@
         // /a./ => 字串含a+任意字元
         // [A-Z] => 字串含大寫字母
         // [A-Z] => 字串含小寫字母
+        // \ => 跳脫字元
         // \d => 數字
         // \D => 非數字
         // \w => 數字字母與底線，等同[A - Za - z0–9_]
@@ -234,6 +235,13 @@
         // {n,} => 最少n次
         // {m,n} => m次到n次
         // {m,n}? => m次到n次之間最少次的
+
+        // ex:
+        // /abc/ => 字串含abc(連續) match "slabcraft"
+        // /ab*c/ => 字串含a接0個或多個b在接c(連續)  match "cbbabbbbcdebc"
+        // /\/example\// => 字串含/example/(連續) match "rfdwsa/example/geag"
+        
+
 
         const testReg = (str) => {
             const rules = /[a-z]/
