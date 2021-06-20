@@ -210,6 +210,16 @@
         }
         // removeRepeatedValue([1, 2, 3, 4, 5, 1, 2, 3])
 
+        // 陣列判斷單一值是否重複
+        function isStringRepeat(arr) {
+            const strings = arr
+            const isRepeat = strings.map((string, stringIndex, stringArray) => {
+                return stringArray.indexOf(string) === stringArray.lastIndexOf(string) ? false : true
+            })
+            return console.log('isRepeat', isRepeat)
+        }
+        isStringRepeat(['A', 'B', 'C', 'D', 'A'])
+
         // regex(尋找匹配字串 / 取代匹配字串)
         // 常用規則
         // /./ => 任意字元
@@ -240,7 +250,7 @@
         // /abc/ => 字串含abc(連續) match "slabcraft"
         // /ab*c/ => 字串含a接0個或多個b在接c(連續)  match "cbbabbbbcdebc"
         // /\/example\// => 字串含/example/(連續) match "rfdwsa/example/geag"
-        
+
 
 
         const testReg = (str) => {
@@ -278,8 +288,6 @@
             console.log('matchStr', matchStr)
         } // 多項多次匹配
         // ignoreCaseReg('ABC')
-
-
 
 
     </script>
