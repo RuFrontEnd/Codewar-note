@@ -218,7 +218,27 @@
             })
             return console.log('isRepeat', isRepeat)
         }
-        isStringRepeat(['A', 'B', 'C', 'D', 'A'])
+        // isStringRepeat(['A', 'B', 'C', 'D', 'A'])
+
+        // 扁平化陣列
+        const flatArray = (array) => {
+            return array.flat(5) // .flat(N)為陣列原生方法, N指定要扁平的層數
+        }
+        // console.log(flatArray([1, [[[[[2]]]], 3]]))
+
+
+        // 物件取值
+        const getValueOfObject = (object, isGetKey) => isGetKey ? Object.keys(object) : Object.entries(object);
+
+        console.log(getValueOfObject({
+            name: '小明',
+            age: 20
+        }, true))
+
+        console.log(getValueOfObject({
+            name: '小明',
+            age: 20
+        }, false))
 
         // regex(尋找匹配字串 / 取代匹配字串)
         // 常用規則
