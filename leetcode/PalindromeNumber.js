@@ -4,14 +4,14 @@
 
 const getIsPalindromeNumber = (x) => {
   let tmp = x;
-  let reversedNum = 0;
-  let lastDigit = 0;
+  let reversedNum = 0; // X 反轉後的數值
+  let lastDigit = 0; // x 的最後一位數
   let times = x.toString().length;
   for (let i = 0; i < times; i++) {
     lastDigit = tmp % 10;
     reversedNum = reversedNum * 10 + lastDigit;
     tmp = parseInt(tmp / 10);
-  }
+  } // 取得反轉後字串
   return x === reversedNum;
 };
 
