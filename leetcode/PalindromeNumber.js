@@ -1,4 +1,5 @@
-// 判斷是否為回文數值 =>
+// leetcode #9 Palindrome Number
+// 判斷是否為回文數值
 // ex: 121 回文為 121 => true; 123 回文為 321 => false;
 
 const getIsPalindromeNumber = (x) => {
@@ -21,3 +22,5 @@ console.log("getIsPalindromeNumber(121)", getIsPalindromeNumber(121));
 // lastDigit    3  | 2  | 1
 // reversedNum  3  | 32 | 321
 // tmp          12 | 1  | 1
+
+// 參考 https://www.code-recipe.com/post/palindrome-number 解法 1
