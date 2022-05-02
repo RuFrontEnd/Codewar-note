@@ -11,7 +11,7 @@ function fibonacci(n) {
 console.log("fibonacci", fibonacci(4), "/ calculation", calculation);
 
 let calculationFix = 0;
-function fibonacciFix(n) {
+function fibonacciFix() {
   calculationFix++;
   let cache = {};
   return function fib(n) {
